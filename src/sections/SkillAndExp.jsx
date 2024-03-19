@@ -164,7 +164,7 @@ const SkillAndExp = () => {
                                         color="white"
                                         className="leading-none"
                                     >
-                                        2022 December - 2024 March
+                                        2023 October - 2024 March
                                     </Typography>
                                 </ScrollAnimation>
                             </TimelineHeader>
