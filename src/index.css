@@ -4,6 +4,7 @@
 
 :root {
   --bg-color: #121111;
+  --test-color: #1c1c1c;
 }
 
 * {
@@ -15,6 +16,7 @@
 
 body {
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 /* Start Loading */

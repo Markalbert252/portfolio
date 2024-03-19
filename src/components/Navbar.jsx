@@ -9,7 +9,8 @@ import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
     const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
-    
+    const [scrolling, setScrolling] = useState(false);
+
     const activeClass = `bg-[#10E956] text-dark text-xl font-medium py-1.5 px-4 rounded-md transition-all duration-300 ease-in-out`;
     const inActiveClass = `text-white text-xl font-medium py-1.5 px-4 rounded-md transition-all duration-300 ease-in-out hover:text-[#10E956]`;
     const activClassMobile = `text-[#10E956] text-xl font-medium`;
@@ -22,9 +23,29 @@ const Navbar = () => {
     const closeMobileNav = () => {
         setIsMobileNavVisible(false);
     }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 5) {
+                setScrolling(true);
+            } else {
+                setScrolling(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
         <>
-            <nav className=" bg-transparent w-full z-30 h-[120px] leading-[120px] absolute">
+            <nav className={
+                scrolling 
+                ? "bg-[#121111] border-b-4 border-b-[#10E956] opacity-95 w-full z-30 h-[100px] leading-[120px] fixed transition-all"
+                : " bg-transparent w-full z-30 h-[100px] leading-[120px] fixed transition-all"
+            }>
                 <div className="px-[20px] sm:px-[50px] mx-auto flex items-center justify-between">
                     <div><a href="#" className="text-white text-2xl font-semibold">Portfolio</a></div>
                     <ul className="hidden sm:inline-flex">

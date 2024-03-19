@@ -133,37 +133,6 @@ const SkillAndExp = () => {
                                         color="white"
                                         className="leading-none"
                                     >
-                                        2023 May - 2023 November
-                                    </Typography>
-                                </ScrollAnimation>
-                            </TimelineHeader>
-                            <TimelineBody className="pb-8">
-                                <ScrollAnimation>
-                                    <div className="bg-[#282e31] py-3 px-5 rounded-md text-white">
-                                        <h2 className="text-white text-2xl">Web Developer</h2>
-                                        <p className="text-base">
-                                            Developed Software projects using VLIT ( Vue,Inertia,
-                                            Laravel, Tailwind ) stack, and MERN ( Mongo, Express,
-                                            React, Node). Adept at driving projects from ideation to
-                                            implementation, encompassing the creating of React
-                                            applications, database architecture, and full-cycle
-                                            development of both frontend UI and backend systems.
-                                        </p>
-                                    </div>
-                                </ScrollAnimation>
-                            </TimelineBody>
-                        </TimelineItem>
-
-                        <TimelineItem>
-                            <TimelineConnector />
-                            <TimelineHeader className="h-3">
-                                <TimelineIcon className="bg-[#10E956]" />
-                                <ScrollAnimation>
-                                    <Typography
-                                        variant="h6"
-                                        color="white"
-                                        className="leading-none"
-                                    >
                                         2023 October - 2024 March
                                     </Typography>
                                 </ScrollAnimation>
@@ -180,6 +149,36 @@ const SkillAndExp = () => {
                                             to translate design mockups and high-performance mobile
                                             applications. Conducted thorough testing and debugging to
                                             ensure high-quality software.
+                                        </p>
+                                    </div>
+                                </ScrollAnimation>
+                            </TimelineBody>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineConnector />
+                            <TimelineHeader className="h-3">
+                                <TimelineIcon className="bg-[#10E956]" />
+                                <ScrollAnimation>
+                                    <Typography
+                                        variant="h6"
+                                        color="white"
+                                        className="leading-none"
+                                    >
+                                        2023 May - 2023 September
+                                    </Typography>
+                                </ScrollAnimation>
+                            </TimelineHeader>
+                            <TimelineBody className="pb-8">
+                                <ScrollAnimation>
+                                    <div className="bg-[#282e31] py-3 px-5 rounded-md text-white">
+                                        <h2 className="text-white text-2xl">Web Developer</h2>
+                                        <p className="text-base">
+                                            Developed Software projects using VLIT ( Vue,Inertia,
+                                            Laravel, Tailwind ) stack, and MERN ( Mongo, Express,
+                                            React, Node). Adept at driving projects from ideation to
+                                            implementation, encompassing the creating of React
+                                            applications, database architecture, and full-cycle
+                                            development of both frontend UI and backend systems.
                                         </p>
                                     </div>
                                 </ScrollAnimation>
