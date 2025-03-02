@@ -8,9 +8,7 @@ import {
 import RootLayout from "./components/RootLayout";
 
 //pages
-import HomePage from "./sections/Home";
-import SkillAndExperiencePage from "./sections/SkillAndExp";
-import ProjectPage from "./sections/Project";
+import HomeSection from "./sections/Home";
 
 const router = createBrowserRouter([
   {
@@ -19,20 +17,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <HomePage />
-      },
-      {
-        path: "/experiences&skills",
-        element: <SkillAndExperiencePage />
-      },
-      {
-        path: "/projects",
-        element: <ProjectPage />
+        element: <HomeSection />
       }
     ]
   }
 ])
-
 
 function App() {
   return <RouterProvider router={router} />
