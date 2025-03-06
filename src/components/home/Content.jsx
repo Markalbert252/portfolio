@@ -10,9 +10,7 @@ const contentVariants = {
     }
 }
 
-const Content = ({
-    changeTheme
-}) => {
+const Content = () => {
     return (
         <motion.div
             className="content-screen"
@@ -41,7 +39,7 @@ const Content = ({
                     I'm a software engineer specializing in building (and
                     occasionally designing) exceptional digital experiences.
                 </p>
-                <button className="text-secondary font-saira font-bold border-2 border-secondary px-8 py-2 rounded-md hover:bg-secondary hover:text-white transition" onClick={changeTheme}>
+                <button className="text-secondary font-saira font-bold border-2 border-secondary px-8 py-2 rounded-md hover:bg-secondary hover:text-white transition">
                     DOWNLOAD CV!
                 </button>
             </div>

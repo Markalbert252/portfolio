@@ -1,21 +1,20 @@
 const experiences = [
     {
-        startDate: '2022',
+        startDate: '2024 May',
         endDate: 'Present',
-        position: 'Frontend Developer',
+        position: 'Junior Developer',
         company: 'Tech Solutions Ltd.',
         location: 'Remote',
-        description: 'Developed and maintained responsive web applications using React and Vue.js. Collaborated with backend developers to integrate APIs and optimize performance. Implemented interactive UI components using Framer Motion and Tailwind CSS. Enhanced website accessibility and performance, achieving a 95+ Lighthouse score.',
-        techStacks: ['react', 'vue', 'MySQL', 'Laravel']
+        description: 'Maintained and enhanced web applications by resolving bugs, optimizing performance, and implementing new features. Conducted comprehensive testing to ensure system functionality, stability, and compliance with project specifications. Skilled in troubleshooting and improving application efficiency while collaborating with teams to deliver high-quality solutions.',
+        techStacks: ['Vue', 'Laravel', 'Inerita', 'MySQL']
     },
     {
-        startDate: '2020',
-        endDate: '2021',
-        position: 'Junior Web Developer',
-        company: 'InnovateX',
-        location: 'New York, USA',
-        description: 'Built and optimized UI components using HTML, CSS, and JavaScript. Assisted in migrating a legacy system to a modern Vue.js framework. Worked closely with designers to ensure a pixel-perfect implementation. Maintained and improved website SEO, increasing organic traffic by 30%.',
-        techStacks: ['react', 'vue', 'MySQL', 'Laravel']
+        startDate: '2023 Dec',
+        endDate: '2024 Mar',
+        position: 'Mobile Developer',
+        company: 'Exbrain Technology',
+        description: 'Experienced in developing mobile applications using React Native and Expo',
+        techStacks: ['React Native', 'Expo']
     }
 ];
 
@@ -61,7 +60,7 @@ const Timeline = ({
 
 const Experience = () => {
     return (
-        <div className="w-screen h-auto md:min-h-screen py-10 md:py-0">
+        <div className="w-screen h-auto md:min-h-screen py-10 md:py-0 overflow-hidden">
             <div className="container lg:max-w-[1160px] mx-auto px-5 md:px-0">
                 <h2 className="text-secondary text-4xl md:text-5xl text-center font-bold mb-5 md:mb-10">
                     Experiences

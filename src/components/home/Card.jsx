@@ -39,8 +39,7 @@ const Card = () => {
                     Maung Thar Kyaw
                 </h1>
                 <p className="text-primary dark:text-white opacity-[0.6]">
-                    Dedicated Junior Software Developer with expertise in frontent and
-                    backend development.
+                    Dedicated Fullstack Developer with experience in frontend, backend, and mobile development.
                 </p>
             </div>
 

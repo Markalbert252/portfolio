@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+// react
+import { useRef, useState, useEffect } from "react";
 
 // motion
 import { motion } from "motion/react";
@@ -8,10 +9,6 @@ import { AndroidMockup } from "react-device-mockup";
 
 // icons
 import { MdOutlineArrowOutward } from "react-icons/md";
-
-// image
-import splashScreen from "../../assets/projects/mobile/bridge/splash_screen.jpg";
-import homeScreen from "../../assets/projects/mobile/bridge/home_screen.jpg";
 
 const leftMockupVariants = {
     hidden: {
@@ -35,10 +32,10 @@ const rightMockupVariants = {
     },
 };
 
-const projectInfoVariants = {
+const infoVariants = {
     hidden: {
         opacity: 0,
-        x: -200,
+        x: -100,
     },
     visible: {
         opacity: 1,
@@ -46,16 +43,20 @@ const projectInfoVariants = {
     },
 };
 
-const BridgeProject = ({ data }) => {
+const MobileTemplate = ({
+    data
+}) => {
+    const [deviceWidth, setDeviceWidth] = useState(0);
+    const deviceContainerRef = useRef();
+
     const {
         title,
         subTitle,
         description,
         techStacks,
-        url
+        url,
+        imgs
     } = data;
-    const deviceContainerRef = useRef(null);
-    const [deviceWidth, setDeviceWidth] = useState(0);
 
     useEffect(() => {
         if (deviceContainerRef.current) {
@@ -69,36 +70,34 @@ const BridgeProject = ({ data }) => {
         };
 
         window.addEventListener("resize", handleResize);
+
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     return (
-        <div className="w-screen h-screen flex-shrink-0 flex justify-center items-center">
+        <div className="flex-shrink-0 w-screen h-screen flex justify-center items-center">
             <div className="container lg:max-w-[1160px] mx-auto px-5 md:px-0 flex flex-col md:flex-row">
                 <div
                     ref={deviceContainerRef}
                     className="w-full md:w-[50%] flex justify-center items-center mb-10 md:mb-0"
                 >
                     <div className="flex items-center">
-                        {/* start left device mockup */}
                         <motion.div
                             variants={leftMockupVariants}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ amount: 0.4 }}
                             transition={{ duration: 1 }}
                         >
                             <AndroidMockup screenWidth={deviceWidth}>
                                 <div className="w-full h-full overflow-hidden">
                                     <img
-                                        src={splashScreen}
-                                        alt="bridge-splash-screen"
+                                        src={imgs[1]}
+                                        alt=""
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
                             </AndroidMockup>
                         </motion.div>
-
                         {/* start right mockup */}
                         <motion.div
                             variants={rightMockupVariants}
@@ -112,7 +111,7 @@ const BridgeProject = ({ data }) => {
                             >
                                 <div className="w-full h-full overflow-hidden">
                                     <img
-                                        src={homeScreen}
+                                        src={imgs[0]}
                                         alt=""
                                         className="w-full h-full object-cover"
                                     />
@@ -123,7 +122,7 @@ const BridgeProject = ({ data }) => {
                 </div>
                 <div className="w-full md:w-[50%] flex items-center">
                     <motion.div
-                        variants={projectInfoVariants}
+                        variants={infoVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ amount: 0.4 }}
@@ -131,7 +130,7 @@ const BridgeProject = ({ data }) => {
                             type: "spring",
                             stiffness: 100,
                         }}
-                        className="text-center md:text-start"
+                        className="text-start"
                     >
                         <div className="mb-3">
                             <h2 className="text-secondary text-4xl md:text-5xl font-saira font-bold mb-3 md:mb-2">
@@ -140,7 +139,7 @@ const BridgeProject = ({ data }) => {
                             <p className="text-secondary text-2xl md:text-4xl font-saira font-bold opacity-[0.5] mb-2 md:mb-5">
                                 {subTitle}
                             </p>
-                            <p className="text-primary dark:text-white text-md text-start">
+                            <p className="text-primary dark:text-white text-md">
                                 {description}
                             </p>
                         </div>
@@ -149,12 +148,14 @@ const BridgeProject = ({ data }) => {
                                 {techStacks.map(stack => <button key={stack} className="px-3 py-1 me-2 mb-2 border border-secondary text-secondary text-sm rounded-md">{stack}</button>)}
                             </div>
                         )}
-                        <a href={url} className="text-white text-sm font-semibold flex items-center space-x-2 hover:text-secondary">{url} <span> <MdOutlineArrowOutward /></span></a>
+                        {url !== '' ? (
+                            <a href={url} className="text-white text-sm font-semibold flex items-center space-x-2 hover:text-secondary">{url} <span> <MdOutlineArrowOutward /></span></a>
+                        ) : <span className="text-red-500 text-sm">This Project is still under development</span>}
                     </motion.div>
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default BridgeProject;
+export default MobileTemplate;

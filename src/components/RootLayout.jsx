@@ -1,9 +1,15 @@
 //react router dom
-import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
+import Navbar from "./Navbar";
+
 const RootLayout = () => {
-    return <Outlet />;
+    return (
+        <>
+            <Navbar />
+            <Outlet />
+        </>
+    );
 }
 
 export default RootLayout;

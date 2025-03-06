@@ -21,8 +21,8 @@ const skills = [
     {
         category: "Front-End",
         languages: [
-            { name: "Tailwind", icon: imageMap["tailwind"], percentage: 90 },
-            { name: "JavaScript", icon: imageMap["js"], percentage: 80 },
+            { name: "Tailwind", icon: imageMap["tailwind"], percentage: 80 },
+            { name: "JavaScript", icon: imageMap["js"], percentage: 70 },
             { name: "React", icon: imageMap["react"], percentage: 60 },
             { name: "Vue", icon: imageMap["vue"], percentage: 50 },
         ],
@@ -30,9 +30,9 @@ const skills = [
     {
         category: "Back-End",
         languages: [
-            { name: "Laravel", icon: imageMap["laravel"], percentage: 70 },
-            { name: "Node Js", icon: imageMap["node"], percentage: 40 },
             { name: "PHP", icon: imageMap["php"], percentage: 70 },
+            { name: "Laravel", icon: imageMap["laravel"], percentage: 60 },
+            { name: "Node Js", icon: imageMap["node"], percentage: 40 },
             { name: "Express Js", icon: imageMap["express"], percentage: 30 },
         ],
     },
@@ -40,7 +40,7 @@ const skills = [
         category: "Others",
         languages: [
             { name: "MongoDB", icon: imageMap["mongodb"], percentage: 30 },
-            { name: "MySQL", icon: imageMap["mysql"], percentage: 70 }
+            { name: "MySQL", icon: imageMap["mysql"], percentage: 60 }
         ],
     },
 ];
