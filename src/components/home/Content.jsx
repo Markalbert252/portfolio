@@ -10,6 +10,11 @@ const contentVariants = {
     }
 }
 
+const openResume = () => {
+    const resumeUrl = 'https://drive.google.com/file/d/13Pr9amHyWzX_3eDD9SzR3KItekJS2gdZ/view?usp=sharing';
+    window.open(resumeUrl, "_blank");
+}
+
 const Content = () => {
     return (
         <motion.div
@@ -39,8 +44,11 @@ const Content = () => {
                     I'm a software engineer specializing in building (and
                     occasionally designing) exceptional digital experiences.
                 </p>
-                <button className="text-secondary font-saira font-bold border-2 border-secondary px-8 py-2 rounded-md hover:bg-secondary hover:text-white transition">
-                    DOWNLOAD CV!
+                <button 
+                    className="text-secondary font-saira font-bold border-2 border-secondary px-8 py-2 rounded-md hover:bg-secondary hover:text-white transition"
+                    onClick={openResume}
+                >
+                    VIEW RESUME!
                 </button>
             </div>
         </motion.div>
