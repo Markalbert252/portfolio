@@ -87,7 +87,7 @@ const ExbrainProject = ({ data }) => {
                                 {techStacks.map(stack => <button key={stack} className="px-3 py-1 me-2 mb-2 border border-secondary text-secondary text-sm rounded-md">{stack}</button>)}
                             </div>
                         )}
-                        <a href={url} className="text-white text-sm font-semibold flex items-center space-x-2 hover:text-secondary">{url} <span> <MdOutlineArrowOutward /></span></a>
+                        <a href={url} className="text-primary dark:text-white text-sm font-semibold flex items-center space-x-2 hover:text-secondary">{url} <span> <MdOutlineArrowOutward /></span></a>
                     </motion.div>
                 </div>
             </div>

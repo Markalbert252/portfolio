@@ -36,8 +36,7 @@ const Content = () => {
                     </span>
                 </h1>
                 <p className="text-primary dark:text-white text-md md:text-xl opacity-[0.8] mb-3 md:mb-5 md:mb-10">
-                    I'm a software engineer specializing in building (and
-                    occasionally designing) exceptional digital experiences.
+                    I'm a Deticated Junior Developer with expertise in backend development using PHP and the Laravel Framework.On the frontend, specializing in React.js, React Native and other modern frameworks, with a focus on transforming design mockups into interactive and responsive user interfaces.
                 </p>
                 <button className="text-secondary font-saira font-bold border-2 border-secondary px-8 py-2 rounded-md hover:bg-secondary hover:text-white transition">
                     DOWNLOAD CV!

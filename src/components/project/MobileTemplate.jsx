@@ -149,7 +149,7 @@ const MobileTemplate = ({
                             </div>
                         )}
                         {url !== '' ? (
-                            <a href={url} className="text-white text-sm font-semibold flex items-center space-x-2 hover:text-secondary">{url} <span> <MdOutlineArrowOutward /></span></a>
+                            <a href={url} className="text-primary dark:text-white text-sm font-semibold flex items-center space-x-2 hover:text-secondary">{url} <span> <MdOutlineArrowOutward /></span></a>
                         ) : <span className="text-red-500 text-sm">This Project is still under development</span>}
                     </motion.div>
                 </div>
